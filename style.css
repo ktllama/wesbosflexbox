@@ -205,4 +205,26 @@ input::-moz-focus-inner {
   border: 5px goldenrod solid;
   height: 100vh;
   /*in real world your content would determine the height*/
+  flex-wrap: wrap;
+  /*default on nowrap so it fits all items in a row- with wrap it will respect the width and just wrap the boxes- wrap also gives it a default height to split the height between the rows of items
+  changing the wrap to wrap reverse the items will start from bottom to top*/
+  /* flex-direction: column; */
+  /*in column will put the items in order going down- the main axis now doesnt go from left to right, but switched with the cross access and now goes from top to bottom*/
+}
+
+/*FLEX ITEM*/
+/*it will try and work with the widths you give it- but in the end it will evenly distribute
+if you give margin it will break it bc thats not part of box model- you can use the new calc method like this
+.box {
+  width: calc(33.333333% - 20px);
+  margin: 10px;
+}
+
+or instead use padding- padding and border are part of the box model
+
+*/
+
+.box {
+  width: 33.3333%;
+  padding: 10px;
 }
